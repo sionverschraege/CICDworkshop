@@ -22,3 +22,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
+      - name: Install ESLint for basic JS syntax check
+          run: |
+                npm install -g eslint
+                eslint script.js
